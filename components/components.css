@@ -1,0 +1,882 @@
+/* Form Styles */
+.minimal-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2em;
+    transition: all 0.3s ease;
+}
+
+.light-mode .minimal-form {
+    background: rgba(250, 250, 250, 0.7);
+}
+
+.dark-mode .minimal-form {
+    background: rgba(30, 30, 30, 0.7);
+}
+
+.minimal-form .field label {
+    font-weight: 300 !important;
+    margin-bottom: 0.8em;
+}
+
+.minimal-form input,
+.minimal-form textarea {
+    background: transparent !important;
+    border: 1px solid !important;
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+}
+
+.light-mode .minimal-form input,
+.light-mode .minimal-form textarea {
+    border-color: #ddd !important;
+    color: #333 !important;
+}
+
+.dark-mode .minimal-form input,
+.dark-mode .minimal-form textarea {
+    border-color: #444 !important;
+    color: #fff !important;
+}
+
+.minimal-form .minimal-button {
+    background: transparent !important;
+    border: 1px solid !important;
+    transition: all 0.3s ease !important;
+    margin-top: 1em;
+}
+
+.light-mode .minimal-button {
+    border-color: #ddd !important;
+    color: #333 !important;
+}
+
+.dark-mode .minimal-button {
+    border-color: #444 !important;
+    color: #fff !important;
+}
+
+.minimal-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Auth Styles */
+.auth-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.auth-section {
+    transition: all 0.3s ease;
+}
+
+.auth-section.hidden {
+    display: none;
+}
+
+.auth-form {
+    margin-top: 2em;
+}
+
+.auth-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.auth-switch a {
+    color: inherit;
+    text-decoration: underline;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.auth-switch a:hover {
+    opacity: 1;
+}
+
+.forgot-password {
+    color: inherit;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.forgot-password:hover {
+    opacity: 1;
+}
+
+/* Card Styles */
+.minimal-cards {
+    margin-top: 2em !important;
+}
+
+/* Basic Card */
+.minimal-card {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 1px solid !important;
+    transition: all 0.3s ease !important;
+    margin: 1em 0 !important;
+}
+
+.light-mode .minimal-card {
+    border-color: #ddd !important;
+}
+
+.dark-mode .minimal-card {
+    border-color: #444 !important;
+}
+
+.minimal-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Gradient Card */
+.gradient-card {
+    border: none !important;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border-radius: 10px !important;
+    padding: 1.5em !important;
+}
+
+.dark-mode .gradient-card {
+    background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.1)) !important;
+}
+
+/* Image Card */
+.image-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px !important;
+    border: none !important;
+}
+
+.image-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover img {
+    transform: scale(1.05);
+}
+
+.image-card .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5em;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+}
+
+/* Hover Card */
+.hover-card {
+    border: 1px solid transparent !important;
+    transition: all 0.3s ease !important;
+    background: transparent !important;
+}
+
+.light-mode .hover-card:hover {
+    border-color: #ddd !important;
+    background: rgba(255,255,255,0.1) !important;
+}
+
+.dark-mode .hover-card:hover {
+    border-color: #444 !important;
+    background: rgba(0,0,0,0.1) !important;
+}
+
+/* Common Card Elements */
+.minimal-card .header,
+.gradient-card .header,
+.image-card .header,
+.hover-card .header {
+    font-weight: 300 !important;
+    font-size: 1.4em !important;
+}
+
+.minimal-card .meta,
+.gradient-card .meta,
+.image-card .meta,
+.hover-card .meta {
+    opacity: 0.7;
+}
+
+/* Gallery Styles */
+.minimal-gallery {
+    margin-top: 2em !important;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-overlay span {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* About Page Styles */
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2em 0;
+}
+
+.about-section {
+    margin-bottom: 3em;
+}
+
+.about-section h2 {
+    font-weight: 300 !important;
+    margin-bottom: 1em !important;
+}
+
+.about-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.light-mode .about-section .header {
+    color: #333 !important;
+}
+
+.dark-mode .about-section .header {
+    color: #fff !important;
+}
+
+.team-section {
+    margin-top: 4em;
+    text-align: center;
+}
+
+.team-member {
+    padding: 2em !important;
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member i {
+    margin-bottom: 1em;
+    opacity: 0.8;
+}
+
+.team-member h3 {
+    font-weight: 300;
+    margin: 0.5em 0;
+}
+
+.team-member p {
+    opacity: 0.7;
+}
+
+.ui.list .item {
+    padding: 1em 0 !important;
+}
+
+.ui.list .item i {
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+.light-mode .ui.list .item i {
+    color: #333;
+}
+
+.dark-mode .ui.list .item i {
+    color: #fff;
+}
+
+/* Dashboard Styles */
+.dashboard-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+}
+
+.dashboard-sidebar {
+    padding: 2em;
+    border-right: 1px solid;
+    transition: all 0.3s ease;
+}
+
+.light-mode .dashboard-sidebar {
+    border-color: #eee;
+    background: rgba(250, 250, 250, 0.7);
+}
+
+.dark-mode .dashboard-sidebar {
+    border-color: #333;
+    background: rgba(30, 30, 30, 0.7);
+}
+
+.sidebar-header {
+    margin-bottom: 3em;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-item i {
+    font-size: 1.2em;
+}
+
+.light-mode .menu-item {
+    color: #666;
+}
+
+.dark-mode .menu-item {
+    color: #bbb;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .menu-item:hover,
+.dark-mode .menu-item.active {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.dashboard-main {
+    padding: 2em;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.header-search {
+    flex: 1;
+    max-width: 300px;
+}
+
+.header-search input {
+    width: 100%;
+    background: transparent !important;
+    border: 1px solid !important;
+    border-radius: 20px !important;
+    padding: 0.5em 1em !important;
+}
+
+.light-mode .header-search input {
+    border-color: #ddd !important;
+    color: #333 !important;
+}
+
+.dark-mode .header-search input {
+    border-color: #444 !important;
+    color: #fff !important;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1em;
+}
+
+.dashboard-content {
+    padding: 1em 0;
+}
+
+/* Stat Cards */
+.stat-card {
+    text-align: center !important;
+    padding: 1.5em !important;
+}
+
+.huge-number {
+    font-size: 2.5em;
+    font-weight: 300;
+    margin: 0.3em 0;
+}
+
+.stat-card .meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.stat-card .arrow.up.icon {
+    color: #21ba45;
+}
+
+/* Activity Card */
+.activity-card {
+    height: 100%;
+}
+
+.ui.feed > .event {
+    padding: 1em 0;
+}
+
+.ui.feed > .event:not(:last-child) {
+    border-bottom: 1px solid;
+}
+
+.light-mode .ui.feed > .event:not(:last-child) {
+    border-color: #eee;
+}
+
+.dark-mode .ui.feed > .event:not(:last-child) {
+    border-color: #333;
+}
+
+/* Quick Actions */
+.quick-actions .list .item {
+    padding: 1em !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.quick-actions .list .item:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .quick-actions .list .item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.quick-actions .list .item i {
+    margin-right: 1em;
+}
+
+/* Responsive Dashboard Layout */
+@media (max-width: 768px) {
+    .dashboard-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-sidebar {
+        position: fixed;
+        left: -250px;
+        top: 0;
+        bottom: 0;
+        z-index: 1000;
+        transition: left 0.3s ease;
+    }
+
+    .dashboard-sidebar.active {
+        left: 0;
+    }
+
+    .dashboard-main {
+        padding: 1em;
+    }
+
+    .ui.stackable.grid > .column:not(.row) {
+        padding: 0.5em !important;
+    }
+}
+
+/* Typography Styles */
+.section-block {
+    margin: 2em 0;
+    padding: 1em;
+}
+
+.section-title {
+    margin-bottom: 1.5em !important;
+    font-weight: 300 !important;
+}
+
+.text-samples {
+    margin: 2em 0;
+}
+
+.large-text {
+    font-size: 1.4em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.small-text {
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.subtle-text {
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Button Styles */
+.button-group {
+    margin-bottom: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+/* Primary Colors */
+.primary-btn {
+    background-color: #2185d0 !important;
+    color: white !important;
+}
+
+.secondary-btn {
+    background-color: #6435c9 !important;
+    color: white !important;
+}
+
+.success-btn {
+    background-color: #21ba45 !important;
+    color: white !important;
+}
+
+.warning-btn {
+    background-color: #f2711c !important;
+    color: white !important;
+}
+
+.danger-btn {
+    background-color: #db2828 !important;
+    color: white !important;
+}
+
+/* Outline Buttons */
+.outline {
+    background: transparent !important;
+}
+
+.primary-outline {
+    border: 1px solid #2185d0 !important;
+    color: #2185d0 !important;
+}
+
+.secondary-outline {
+    border: 1px solid #6435c9 !important;
+    color: #6435c9 !important;
+}
+
+.success-outline {
+    border: 1px solid #21ba45 !important;
+    color: #21ba45 !important;
+}
+
+.warning-outline {
+    border: 1px solid #f2711c !important;
+    color: #f2711c !important;
+}
+
+.danger-outline {
+    border: 1px solid #db2828 !important;
+    color: #db2828 !important;
+}
+
+/* Table Styles */
+.minimal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+
+.minimal-table th,
+.minimal-table td {
+    padding: 1em;
+    text-align: left;
+    border-bottom: 1px solid;
+}
+
+.light-mode .minimal-table th,
+.light-mode .minimal-table td {
+    border-color: #eee;
+}
+
+.dark-mode .minimal-table th,
+.dark-mode .minimal-table td {
+    border-color: #333;
+}
+
+.status-active {
+    background-color: #21ba45 !important;
+    color: white !important;
+}
+
+.status-pending {
+    background-color: #f2711c !important;
+    color: white !important;
+}
+
+.status-completed {
+    background-color: #2185d0 !important;
+    color: white !important;
+}
+
+.ui.progress {
+    margin: 0 !important;
+}
+
+.ui.progress .bar {
+    height: 4px !important;
+    background: #2185d0;
+}
+
+/* Form Styles in Dashboard */
+.dashboard-form {
+    max-width: none !important;
+}
+
+.dashboard-form .field {
+    margin-bottom: 1.5em !important;
+}
+
+/* List Styles */
+.minimal-list {
+    padding-left: 1.5em !important;
+}
+
+.minimal-list li {
+    margin-bottom: 0.8em !important;
+    line-height: 1.6 !important;
+}
+
+.minimal-list.ordered {
+    counter-reset: ordered-list;
+}
+
+.minimal-list.ordered li {
+    counter-increment: ordered-list;
+    position: relative;
+}
+
+.minimal-list.ordered li::before {
+    content: counter(ordered-list) ".";
+    position: absolute;
+    left: -1.5em;
+    color: inherit;
+    opacity: 0.7;
+}
+
+/* Dark Mode Adjustments */
+.dark-mode .section-title,
+.dark-mode .ui.header {
+    color: #fff !important;
+}
+
+.dark-mode .minimal-table th {
+    color: #fff;
+}
+
+.dark-mode .minimal-table td {
+    color: #bbb;
+}
+
+/* Navigation Styles */
+.minimal-nav {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin-bottom: 2em;
+    transition: all 0.3s ease;
+}
+
+.light-mode .minimal-nav {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-bottom: 1px solid #eee !important;
+}
+
+.dark-mode .minimal-nav {
+    background: rgba(30, 30, 30, 0.9) !important;
+    border-bottom: 1px solid #333 !important;
+}
+
+.minimal-nav .item {
+    color: inherit !important;
+    font-weight: 300 !important;
+    transition: all 0.3s ease !important;
+}
+
+.minimal-nav .item.active {
+    background: transparent !important;
+    font-weight: 400 !important;
+}
+
+.light-mode .minimal-nav .item:hover {
+    background: rgba(0, 0, 0, 0.03) !important;
+}
+
+.dark-mode .minimal-nav .item:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* About Hero Section */
+.about-hero {
+    text-align: center;
+    margin: 4em 0;
+    padding: 2em;
+}
+
+.hero-subtitle {
+    font-size: 1.4em;
+    color: inherit;
+    opacity: 0.8;
+    margin-top: 1em;
+    font-weight: 300;
+}
+
+/* Text Sections */
+.text-sections {
+    margin: 4em 0;
+}
+
+.text-section {
+    margin-bottom: 3em;
+}
+
+.text-section h3 {
+    margin-bottom: 1em !important;
+    font-weight: 300 !important;
+}
+
+.text-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.text-section.center-aligned {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3em;
+}
+
+/* Team Description */
+.team-description {
+    margin-top: 1em;
+    opacity: 0.8;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* Footer Styles */
+.footer.segment {
+    padding: 4em 0;
+    margin-top: 3em;
+    background: #1b1c1d !important;
+}
+
+.footer .inverted.header {
+    font-weight: 300 !important;
+    margin-bottom: 1.5em !important;
+}
+
+.footer .inverted.link.list .item {
+    padding: 0.5em 0 !important;
+    transition: opacity 0.3s ease;
+}
+
+.footer .inverted.link.list .item:hover {
+    opacity: 0.8;
+}
+
+.footer .horizontal.list {
+    margin-top: 1em;
+}
+
+.footer .horizontal.list .item {
+    margin-right: 1em !important;
+}
+
+.footer .horizontal.list .icon {
+    font-size: 1.2em;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer .horizontal.list .icon:hover {
+    opacity: 1;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 480px) {
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group .button {
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+
+    .minimal-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .two.fields {
+        flex-direction: column !important;
+    }
+
+    .two.fields > .field {
+        width: 100% !important;
+    }
+}

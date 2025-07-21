@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Cards</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="components.css">
+</head>
+<body class="light-mode">
+    <button class="ui circular icon button theme-toggle" id="themeToggle">
+        <i class="moon icon"></i>
+    </button>
+
+    <div class="ui container main-content">
+        <h1 class="ui center aligned header imagine-title">Featured Stories</h1>
+        
+        <h2 class="ui center aligned header section-title">Basic Cards</h2>
+        <div class="ui two column stackable grid minimal-cards">
+            <div class="column">
+                <div class="ui card minimal-card">
+                    <div class="content">
+                        <div class="header">Minimal Style</div>
+                        <div class="meta">Clean and Simple</div>
+                        <div class="description">
+                            A basic card with minimal styling, perfect for content-focused displays.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <i class="star icon"></i>
+                        <span>Basic Example</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="column">
+                <div class="ui card hover-card">
+                    <div class="content">
+                        <div class="header">Hover Effect</div>
+                        <div class="meta">Interactive Design</div>
+                        <div class="description">
+                            A card that reveals its border and background on hover.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <i class="magic icon"></i>
+                        <span>Hover to see</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="ui center aligned header section-title">Gradient Cards</h2>
+        <div class="ui two column stackable grid minimal-cards">
+            <div class="column">
+                <div class="ui card gradient-card">
+                    <div class="content">
+                        <div class="header">Gradient Style</div>
+                        <div class="meta">Subtle Elegance</div>
+                        <div class="description">
+                            A card with a subtle gradient background and glass-like effect.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <i class="paint brush icon"></i>
+                        <span>Gradient Example</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="column">
+                <div class="ui card gradient-card">
+                    <div class="content">
+                        <div class="header">Glass Effect</div>
+                        <div class="meta">Modern Touch</div>
+                        <div class="description">
+                            Combines gradient with backdrop filter for a modern look.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <i class="tint icon"></i>
+                        <span>Glass Example</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="ui center aligned header section-title">Image Cards</h2>
+        <div class="ui two column stackable grid minimal-cards">
+            <div class="column">
+                <div class="ui card image-card">
+                    <img src="https://source.unsplash.com/800x600/?nature" alt="Nature">
+                    <div class="content">
+                        <div class="header">Image Overlay</div>
+                        <div class="meta">Visual Impact</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="column">
+                <div class="ui card image-card">
+                    <img src="https://source.unsplash.com/800x600/?abstract" alt="Abstract">
+                    <div class="content">
+                        <div class="header">Dynamic Style</div>
+                        <div class="meta">Bold Presence</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.2/dist/semantic.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

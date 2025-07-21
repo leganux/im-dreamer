@@ -1,0 +1,252 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #333;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.theme-toggle {
+    position: fixed !important;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: all 0.3s ease !important;
+}
+
+body.light-mode .theme-toggle {
+    background-color: #f5f5f5 !important;
+    color: #333 !important;
+}
+
+body.dark-mode .theme-toggle {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: 2rem;
+}
+
+.imagine-title {
+    font-size: 3em !important;
+    margin-bottom: 2em !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.2em;
+    text-transform: lowercase;
+}
+
+body.light-mode .imagine-title {
+    color: #333 !important;
+}
+
+body.dark-mode .imagine-title {
+    color: #fff !important;
+}
+
+.main-quote {
+    text-align: center;
+    font-size: 3.6em;
+    margin: 1em 0;
+    font-weight: 300;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+body.light-mode .main-quote {
+    color: #555;
+}
+
+body.dark-mode .main-quote {
+    color: #bbb;
+}
+
+.highlight {
+    font-size: 2.5em;
+    font-weight: 500;
+    display: block;
+    margin: 0.5em 0;
+    letter-spacing: 0.05em;
+    text-align: center;
+    line-height: 1.2;
+}
+
+body.light-mode .highlight {
+    color: #222;
+}
+
+body.dark-mode .highlight {
+    color: #fff;
+}
+
+.nav-links {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em !important;
+    gap: 3em;
+    width: 100%;
+    max-width: 600px;
+}
+
+.nav-links .item {
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+body.light-mode .nav-links .item {
+    color: #666 !important;
+}
+
+body.light-mode .nav-links .item:hover {
+    color: #333 !important;
+}
+
+body.dark-mode .nav-links .item {
+    color: #bbb !important;
+}
+
+body.dark-mode .nav-links .item:hover {
+    color: #fff !important;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 2em 0;
+    font-size: 1.1em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.light-mode footer {
+    color: #777;
+}
+
+body.dark-mode footer {
+    color: #999;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+/* Cloud Styles */
+.cloud {
+    position: fixed;
+    border-radius: 100px;
+    width: 300px;
+    height: 100px;
+    z-index: -1;
+}
+
+body.light-mode .cloud {
+    background: rgb(240, 240, 240);
+}
+
+body.dark-mode .cloud {
+    background: rgb(50, 50, 50);
+}
+
+.cloud:before,
+.cloud:after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+body.light-mode .cloud:before,
+body.light-mode .cloud:after {
+    background: rgb(240, 240, 240);
+}
+
+body.dark-mode .cloud:before,
+body.dark-mode .cloud:after {
+    background: rgb(50, 50, 50);
+}
+
+.cloud:before {
+    width: 120px;
+    height: 120px;
+    top: -50px;
+    left: 50px;
+}
+
+.cloud:after {
+    width: 100px;
+    height: 100px;
+    top: -30px;
+    right: 50px;
+}
+
+.cloud1 {
+    top: 20%;
+    left: 10%;
+    transform: scale(1.5);
+    animation: float 30s linear infinite;
+}
+
+.cloud2 {
+    top: 50%;
+    right: 5%;
+    transform: scale(1.2);
+    animation: float 25s linear infinite;
+}
+
+.cloud3 {
+    top: 70%;
+    left: 20%;
+    transform: scale(0.8);
+    animation: float 35s linear infinite;
+}
+
+.cloud4 {
+    top: 90%;
+    right: 10%;
+    transform: scale(0.6);
+    animation: float 20s linear infinite;
+}
+.cloud5 {
+    top: 10%;
+    right: 10%;
+    transform: scale(0.6);
+    animation: float 20s linear infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(0) scale(1.5);
+    }
+    50% {
+        transform: translateX(200px) scale(1.5);
+    }
+    100% {
+        transform: translateX(0) scale(1.5);
+    }
+}

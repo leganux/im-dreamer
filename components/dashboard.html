@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="components.css">
+</head>
+<body class="light-mode">
+    <button class="ui circular icon button theme-toggle" id="themeToggle">
+        <i class="moon icon"></i>
+    </button>
+
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <div class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <h3 class="ui header">
+                    <i class="dream icon"></i>
+                    Dreamer
+                </h3>
+            </div>
+            <div class="sidebar-menu">
+                <a class="menu-item active">
+                    <i class="home icon"></i>
+                    <span>Overview</span>
+                </a>
+                <a class="menu-item">
+                    <i class="chart line icon"></i>
+                    <span>Analytics</span>
+                </a>
+                <a class="menu-item">
+                    <i class="users icon"></i>
+                    <span>Community</span>
+                </a>
+                <a class="menu-item">
+                    <i class="cog icon"></i>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="dashboard-main">
+            <div class="dashboard-header">
+                <div class="header-search">
+                    <div class="ui transparent icon input">
+                        <input type="text" placeholder="Search...">
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button class="ui circular icon button">
+                        <i class="bell icon"></i>
+                    </button>
+                    <button class="ui circular icon button">
+                        <i class="user icon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="dashboard-content">
+                <!-- Stats Cards -->
+                <div class="ui four column stackable grid">
+                    <div class="column">
+                        <div class="ui card gradient-card stat-card">
+                            <div class="content">
+                                <div class="header">Dreams</div>
+                                <div class="huge-number">248</div>
+                                <div class="meta">
+                                    <i class="arrow up icon"></i>
+                                    12% this week
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui card gradient-card stat-card">
+                            <div class="content">
+                                <div class="header">Inspirations</div>
+                                <div class="huge-number">1.2k</div>
+                                <div class="meta">
+                                    <i class="arrow up icon"></i>
+                                    8% this month
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui card gradient-card stat-card">
+                            <div class="content">
+                                <div class="header">Connections</div>
+                                <div class="huge-number">892</div>
+                                <div class="meta">
+                                    <i class="arrow up icon"></i>
+                                    15% growth
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui card gradient-card stat-card">
+                            <div class="content">
+                                <div class="header">Impact</div>
+                                <div class="huge-number">4.5k</div>
+                                <div class="meta">
+                                    <i class="arrow up icon"></i>
+                                    20% increase
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="ui grid">
+                    <div class="ten wide column">
+                        <div class="ui card minimal-card activity-card">
+                            <div class="content">
+                                <div class="header">Recent Activity</div>
+                                <div class="ui feed">
+                                    <div class="event">
+                                        <div class="label">
+                                            <i class="pencil icon"></i>
+                                        </div>
+                                        <div class="content">
+                                            <div class="summary">
+                                                New dream journal entry
+                                                <div class="date">Just now</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="event">
+                                        <div class="label">
+                                            <i class="users icon"></i>
+                                        </div>
+                                        <div class="content">
+                                            <div class="summary">
+                                                Connected with 3 new dreamers
+                                                <div class="date">2 hours ago</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="event">
+                                        <div class="label">
+                                            <i class="star icon"></i>
+                                        </div>
+                                        <div class="content">
+                                            <div class="summary">
+                                                Achievement unlocked
+                                                <div class="date">4 hours ago</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="six wide column">
+                        <div class="ui card hover-card quick-actions">
+                            <div class="content">
+                                <div class="header">Quick Actions</div>
+                                <div class="ui list">
+                                    <a class="item">
+                                        <i class="plus circle icon"></i>
+                                        <div class="content">New Dream Entry</div>
+                                    </a>
+                                    <a class="item">
+                                        <i class="share icon"></i>
+                                        <div class="content">Share Story</div>
+                                    </a>
+                                    <a class="item">
+                                        <i class="calendar icon"></i>
+                                        <div class="content">Schedule Event</div>
+                                    </a>
+                                    <a class="item">
+                                        <i class="mail icon"></i>
+                                        <div class="content">Send Message</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typography Examples -->
+            <div class="section-block">
+                <h2 class="ui header section-title">Typography</h2>
+                <div class="ui grid">
+                    <div class="sixteen wide column">
+                        <h1 class="ui header">Heading 1</h1>
+                        <h2 class="ui header">Heading 2</h2>
+                        <h3 class="ui header">Heading 3</h3>
+                        <h4 class="ui header">Heading 4</h4>
+                        <h5 class="ui header">Heading 5</h5>
+                        <h6 class="ui header">Heading 6</h6>
+
+                        <div class="text-samples">
+                            <p class="large-text">Large text for important content</p>
+                            <p>Regular paragraph text for general content</p>
+                            <p class="small-text">Small text for additional information</p>
+                            <p class="subtle-text">Subtle text for less important content</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="section-block">
+                <h2 class="ui header section-title">Buttons</h2>
+                <div class="ui grid">
+                    <div class="sixteen wide column">
+                        <div class="button-group">
+                            <button class="ui button primary-btn">Primary</button>
+                            <button class="ui button secondary-btn">Secondary</button>
+                            <button class="ui button success-btn">Success</button>
+                            <button class="ui button warning-btn">Warning</button>
+                            <button class="ui button danger-btn">Danger</button>
+                        </div>
+                        <div class="button-group">
+                            <button class="ui button outline primary-outline">Primary Outline</button>
+                            <button class="ui button outline secondary-outline">Secondary Outline</button>
+                            <button class="ui button outline success-outline">Success Outline</button>
+                            <button class="ui button outline warning-outline">Warning Outline</button>
+                            <button class="ui button outline danger-outline">Danger Outline</button>
+                        </div>
+                        <div class="button-group">
+                            <button class="ui circular icon button"><i class="plus icon"></i></button>
+                            <button class="ui circular icon button"><i class="edit icon"></i></button>
+                            <button class="ui circular icon button"><i class="trash icon"></i></button>
+                            <button class="ui circular icon button"><i class="share icon"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table Example -->
+            <div class="section-block">
+                <h2 class="ui header section-title">Table Example</h2>
+                <div class="ui grid">
+                    <div class="sixteen wide column">
+                        <table class="ui minimal-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Status</th>
+                                    <th>Progress</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Dream Project Alpha</td>
+                                    <td><span class="ui label status-active">Active</span></td>
+                                    <td>
+                                        <div class="ui progress">
+                                            <div class="bar" style="width: 75%"></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="ui mini icon button"><i class="edit icon"></i></button>
+                                        <button class="ui mini icon button"><i class="trash icon"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Vision Quest Beta</td>
+                                    <td><span class="ui label status-pending">Pending</span></td>
+                                    <td>
+                                        <div class="ui progress">
+                                            <div class="bar" style="width: 45%"></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="ui mini icon button"><i class="edit icon"></i></button>
+                                        <button class="ui mini icon button"><i class="trash icon"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Imagination Delta</td>
+                                    <td><span class="ui label status-completed">Completed</span></td>
+                                    <td>
+                                        <div class="ui progress">
+                                            <div class="bar" style="width: 100%"></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="ui mini icon button"><i class="edit icon"></i></button>
+                                        <button class="ui mini icon button"><i class="trash icon"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Example -->
+            <div class="section-block">
+                <h2 class="ui header section-title">Form Example</h2>
+                <div class="ui grid">
+                    <div class="sixteen wide column">
+                        <form class="ui form minimal-form dashboard-form">
+                            <div class="two fields">
+                                <div class="field">
+                                    <label>First Name</label>
+                                    <input type="text" placeholder="First Name">
+                                </div>
+                                <div class="field">
+                                    <label>Last Name</label>
+                                    <input type="text" placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>Bio</label>
+                                <textarea rows="3" placeholder="Tell us about yourself"></textarea>
+                            </div>
+                            <div class="field">
+                                <label>Interests</label>
+                                <div class="ui fluid multiple search selection dropdown">
+                                    <input type="hidden" name="interests">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">Select interests</div>
+                                    <div class="menu">
+                                        <div class="item" data-value="art">Art</div>
+                                        <div class="item" data-value="music">Music</div>
+                                        <div class="item" data-value="technology">Technology</div>
+                                        <div class="item" data-value="nature">Nature</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inline fields">
+                                <label>Notification Preferences:</label>
+                                <div class="field">
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="email">
+                                        <label>Email</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="sms">
+                                        <label>SMS</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <button class="ui button primary-btn" type="submit">Submit</button>
+                                <button class="ui button secondary-btn" type="reset">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lists -->
+            <div class="section-block">
+                <h2 class="ui header section-title">Lists</h2>
+                <div class="ui grid">
+                    <div class="eight wide column">
+                        <h4 class="ui header">Unordered List</h4>
+                        <ul class="ui list minimal-list">
+                            <li>First item with some details</li>
+                            <li>Second item that's also important</li>
+                            <li>Third item showing more content</li>
+                            <li>Fourth item to complete the list</li>
+                        </ul>
+                    </div>
+                    <div class="eight wide column">
+                        <h4 class="ui header">Ordered List</h4>
+                        <ol class="ui list minimal-list ordered">
+                            <li>First step in the process</li>
+                            <li>Second step to follow</li>
+                            <li>Third step in sequence</li>
+                            <li>Final step to complete</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.2/dist/semantic.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
