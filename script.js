@@ -53,4 +53,31 @@ document.addEventListener('DOMContentLoaded', () => {
             cloud.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
         });
     });
+
+    // Background music functionality (only for index page)
+    if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const playPauseIcon = playPauseBtn.querySelector('i');
+
+        playPauseBtn.addEventListener('click', () => {
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+                playPauseIcon.className = 'pause icon';
+            } else {
+                backgroundMusic.pause();
+                playPauseIcon.className = 'play icon';
+            }
+        });
+
+        // Play music when clicking anywhere on the page (except the play/pause button)
+        document.addEventListener('click', (event) => {
+            if (event.target !== playPauseBtn && !playPauseBtn.contains(event.target)) {
+                if (backgroundMusic.paused) {
+                    backgroundMusic.play();
+                    playPauseIcon.className = 'pause icon';
+                }
+            }
+        });
+    }
 });

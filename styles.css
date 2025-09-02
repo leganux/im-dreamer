@@ -97,17 +97,46 @@ body.dark-mode .highlight {
     color: #fff;
 }
 
+@media (max-width: 768px) {
+    .main-quote {
+        font-size: 2.4em;
+    }
+
+    .highlight {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-quote {
+        font-size: 2em;
+    }
+
+    .highlight {
+        font-size: 1.5em;
+    }
+}
+
 .nav-links {
     display: flex !important;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin: 2em auto !important;
     gap: 2em;
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;
     padding: 1em 0;
     border-top: 1px solid rgba(0,0,0,0.1);
     border-bottom: 1px solid rgba(0,0,0,0.1);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.nav-links::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
 }
 
 .nav-links .item {
@@ -115,6 +144,14 @@ body.dark-mode .highlight {
     transition: color 0.3s ease;
     text-align: center;
     padding: 0.5em 1em;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        justify-content: flex-start;
+        padding: 1em;
+    }
 }
 
 .content-container {
@@ -145,17 +182,18 @@ body.dark-mode .nav-links .item:hover {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
+    position: fixed;
+    bottom: 50px; /* Adjust this value to leave space for the audio player */
     left: 0;
     right: 0;
     width: 100%;
-    padding: 2em 0;
+    padding: 1em 0;
     font-size: 1.1em;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 999;
 }
 
 body.light-mode footer {
@@ -168,8 +206,22 @@ body.dark-mode footer {
 
 footer p {
     margin: 0;
-    padding: 0;
-    white-space: nowrap;
+    padding: 0 1em;
+    white-space: normal;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+@media (max-width: 768px) {
+    footer {
+        font-size: 0.9em;
+    }
+}
+
+.main-content {
+    padding-bottom: 100px; /* Adjust this value to ensure content doesn't get cut off */
 }
 
 /* Cloud Styles */
@@ -264,4 +316,32 @@ body.dark-mode .cloud:after {
     100% {
         transform: translateX(0) scale(1.5);
     }
+}
+
+.audio-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.audio-player button {
+    background-color: transparent !important;
+    color: white !important;
+    border: none !important;
+    font-size: 20px !important;
+    cursor: pointer;
+    outline: none;
+}
+
+.audio-player button:hover {
+    opacity: 0.8;
+}
+
+body {
+    padding-bottom: 100px; /* Adjust space for the footer and audio player */
 }
