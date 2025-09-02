@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.style.opacity = '0.5';
             setTimeout(() => {
                 link.style.opacity = '1';
-                window.open(link.href, '_blank');
+                window.open(link.href, '_self');
             }, 300);
         });
     });
